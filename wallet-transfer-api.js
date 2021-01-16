@@ -63,6 +63,8 @@ class Wallet {
                 post_req.write(post_data);
                 post_req.end();
                 });
+
+                return response;
         }
 
 }

@@ -23,3 +23,20 @@ if (error == ""){
 
 //calling the wallet transfer api to transfer fund to the benificiary
 const wallet = require("./wallet-transfer-api");
+responseW = wallet.walletTransfer();
+console.log("Wallet api called with following response: "+ responseW);
+
+
+//verifying checksumhash
+ChecksumhashVerify = verify.verify();
+if (ChecksumhashVerify){
+        console.log("Checksum Matched");
+}else{
+        console.log("Checksum mismatched");
+}
+
+//status query API to re verify the transaction
+//orderId required to verify the payment or transaction details
+const status = require('./status-query');
+statusQuery = status.verify();
+console.log("Status query API called with following response" + statusQuery);
