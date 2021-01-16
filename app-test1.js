@@ -28,6 +28,7 @@ console.log("Wallet api called with following response: "+ responseW);
 
 
 //verifying checksumhash
+const verify = require('./verify-checksumhash');
 ChecksumhashVerify = verify.verify();
 if (ChecksumhashVerify){
         console.log("Checksum Matched");
