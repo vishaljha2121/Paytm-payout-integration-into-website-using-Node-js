@@ -19,7 +19,7 @@ class GenerateChecksumhash {
                         console.log(error);
                 });
                 
-                return result,error;
+                
         }
 
 }
